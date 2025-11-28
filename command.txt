@@ -1,0 +1,7 @@
+screen-length 0 temporary
+display power
+display fan
+display lacp brief
+display cpu
+display memory
+display ospf peer brief

@@ -1,0 +1,6 @@
+screen-length 0 temporary
+system-view
+netconf
+y
+source ip int loopback 0 port 830
+q
