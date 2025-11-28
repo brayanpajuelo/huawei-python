@@ -107,9 +107,10 @@ def NetconfEditCfg(xml, deviceip, username, password):
 
 if __name__ == "__main__":
     try:
-        #DC = Datacom(deviceip, username, password)        #only the first time
-        #with open('opennetconf.txt') as cmds:              #only the first time
-        #    DC.OpenNetconf(cmds)                           #only the first time
+        DC = Datacom(deviceip, username, password)
+        print('netconf enable...')
+		with open('opennetconf.txt') as cmds:
+            DC.OpenNetconf(cmds)
         NetconfEditCfg(YANGxml, deviceip, nc_username, nc_password)
 
         today = str(date.today())
@@ -141,4 +142,5 @@ if __name__ == "__main__":
     except Exception as err:
         print(err)
     except KeyboardInterrupt:
+
         print('monitoring has stopped!')
